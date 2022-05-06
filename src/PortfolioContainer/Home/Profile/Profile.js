@@ -27,7 +27,7 @@ export default function Profile() {
             <span className="primary-text">
               {" "}
               Hello , I'M{" "}
-              <span className="highlighted-text">MARIYAH BALUNGA</span>
+              <span className="highlighted-text">MARIYAH LUZINDA</span>
             </span>
           </div>
           <div className="profile-details-role">
@@ -39,15 +39,15 @@ export default function Profile() {
                   loop={Infinity}
                   steps={[
                     "Enthusiastic Dev 😎",
-                    1000,
+                    1020,
                     "Full stack Developer 💻",
-                    1000,
+                    1020,
                     "MERN stack Dev 📱",
-                    1000,
+                    1020,
                     "Cross Platform Dev 🔴",
-                    1000,
+                    1020,
                     "React/React Native 🌐",
-                    1000,
+                    1020,
                   ]}
                 />
               </h1>
