@@ -44,22 +44,22 @@ const Resume = (props) => {
 
   /* STATIC RESUME DATA FOR THE LABELS*/
   const resumeBullets = [
-    { label: "Education", logoSrc: "education.svg" },
-    { label: "Work History", logoSrc: "work-history.svg" },
-    { label: "Programming Skills", logoSrc: "programming-skills.svg" },
-    { label: "Projects", logoSrc: "projects.svg" },
-    { label: "Interests", logoSrc: "interests.svg" },
+    { label: "Education", logoSrc: "educ.png" },
+    { label: "Work History", logoSrc: "work.jpg" },
+    { label: "Programming Skills", logoSrc: "prog.png" },
+    { label: "Projects", logoSrc: "proj.png" },
+    { label: "Interests", logoSrc: "likes.png" },
   ];
 
   //here we have
   const programmingSkillsDetails = [
-    { skill: "JavaScript", ratingPercentage: 85 },
-    { skill: "React JS", ratingPercentage: 85 },
-    { skill: "React Native", ratingPercentage: 85 },
-    { skill: "Express JS", ratingPercentage: 89 },
-    { skill: "Node JS", ratingPercentage: 89 },
-    { skill: "Mongo Db", ratingPercentage: 70 },
-    { skill: "Core Java", ratingPercentage: 80 },
+    { skill: "JavaScript", ratingPercentage: 70 },
+    { skill: "React JS", ratingPercentage: 70 },
+    { skill: "React Native", ratingPercentage: 10},
+    { skill: "Express JS", ratingPercentage: 10 },
+    { skill: "Node JS", ratingPercentage: 40},
+    { skill: "Mongo Db", ratingPercentage: 10 },
+    { skill: "Core Java", ratingPercentage: 60},
     { skill: "HTML", ratingPercentage: 80 },
     { skill: "CSS", ratingPercentage: 80 },
   ];
@@ -67,49 +67,74 @@ const Resume = (props) => {
   const projectsDetails = [
     {
       title: "Personal Portfolio Website",
-      duration: { fromDate: "2020", toDate: "2021" },
+      duration: { fromDate: "2022", toDate: "2022" },
       description:
         "A Personal Portfolio website to showcase all my details and projects at one place.",
       subHeading: "Technologies Used: React JS, Bootsrap",
     },
     {
       title: "Mobile E-shop ",
-      duration: { fromDate: "2020", toDate: "2021" },
+      duration: { fromDate: "2020", toDate: "2022" },
       description:
-        "An ecommerce application designed to sell products online wth payment system integration",
+        "An ecommerce mobile application designed to sell products online with payment system integration",
       subHeading:
-        "Technologies Used:  React Native, Mongo DB, Express Js, Node Js, Redux.",
+        "Technologies Used:  Ionic, HTML, CSS, JavaScript",
+    },
+    // {
+    //   title: "School Website",
+    //   duration: { fromDate: "2020", toDate: "2021" },
+    //   description:
+    //     "My high School website",
+    //   subHeading:
+    //     "Technologies Used: ReactJS, TailWind Css, JavaScript.",
+    // },
+    // {
+    //   title: "News Application",
+    //   duration: { fromDate: "2022", toDate: "2022" },
+    //   description:
+    //     "News application that displays both local and international news.",
+    //   subHeading:
+    //     "Technologies Used: ReactJS, Bootstrap, JavaScript.",
+    // },
+    {
+      title: "Crowd Funding Application",
+      duration: { fromDate: "2021", toDate: "2022" },
+      description:
+        "A web based crowd funding application. ",
+      subHeading:
+        "Technologies Used: NodeJs, Css, HTML.",
     },
     {
-      title: "Ecommerce Website ",
+      title: "Messaging Application",
       duration: { fromDate: "2020", toDate: "2021" },
       description:
-        "Online ecommerce website for showcasing and selling products onlne with payment system integration, both Paypal and Stripe",
+        "A messaging application that works like whatsapp.",
       subHeading:
-        "Technologies Used: Mongo DB, Epress Js, React Js, Node JS, Redux, Bootstrap.",
+        "Technologies Used: ReactJS, TailWind Css, JavaScript.",
     },
+
   ];
 
   const resumeDetails = [
     <div className="resume-screen-container" key="education">
       <ResumeHeading
-        heading={"University of Legon Accra, Ghana"}
-        subHeading={"BACHELOR OF SCIENCE INFORMATION TECHNOLOGY"}
-        fromDate={"2014"}
-        toDate={"2018"}
+        heading={"Makerere Universty"}
+        subHeading={"BACHELOR OF SCIENCE IN COMPUTER SCIENCE"}
+        fromDate={"2019"}
+        toDate={"2024"}
       />
 
       <ResumeHeading
-        heading={"National Youth Service Corps"}
-        subHeading={"Ministry Of Science And Technogy. Uyo Akwa Ibom State"}
-        fromDate={"2019"}
-        toDate={"2020"}
+        heading={"Caltec Academy Makerere"}
+        subHeading={"O-Level and A-Level"}
+        fromDate={"2012"}
+        toDate={"2017"}
       />
       <ResumeHeading
-        heading={"High School "}
-        subHeading={"Command Secondary School Mbiri"}
-        fromDate={"2007"}
-        toDate={"2012"}
+        heading={"Primary "}
+        subHeading={"Guiding Star Primary School"}
+        fromDate={"2009"}
+        toDate={"2011"}
       />
     </div>,
 
@@ -117,30 +142,27 @@ const Resume = (props) => {
     <div className="resume-screen-container" key="work-experience">
       <div className="experience-container">
         <ResumeHeading
-          heading={"Ehizeex Technoloy"}
-          subHeading={"FULL STACK DEVELOPER INTERN"}
+          heading={"MPAMPE"}
+          subHeading={"FrontEnd Developer"}
           fromDate={"2021"}
-          toDate={"Present"}
+          toDate={"2022"}
         />
         <div className="experience-description">
           <span className="resume-description-text">
-            Currently working as MERN stack web and mobile developer and also an
-            online instructor on udemy.
+            Currently working as a FrontEnd Developer.
           </span>
         </div>
         <div className="experience-description">
           <span className="resume-description-text">
-            - Developed an ecommerce website for client with the dashboard for
-            managing the products, managing reviews, users, payment etc. .
+            - Developed a crowd funding website to allow people with financial need create campaigns for funding.
           </span>
           <br />
           <span className="resume-description-text">
-            - Integrated the web app with backend services to create new user
-            onboarding application with dynamic form content.{" "}
+            - I have as well worked on several other Personal based projects with both the FrontEnd and backend.
           </span>
           <br />
           <span className="resume-description-text">
-            - I stretch my mental capacity to develope UI as per the given
+            - I stretch my mental capacity to develope the UI as per the given
             designs.
           </span>
           <br />
@@ -184,17 +206,15 @@ const Resume = (props) => {
     /* Interests */
     <div className="resume-screen-container" key="interests">
       <ResumeHeading
-        heading="Teaching"
-        description="Apart from being a tech enthusiast and a code writer, i also love to teach people what i know simply because i believe in sharing."
+        heading="Leadership"
+        description="Apart from being a tech enthusiast and a code writer, I am so passionate about leadership and I have been a leader since my high school after being elected headgirl and as well as the women affairs minister at university."
       />
       <ResumeHeading
         heading="Music"
-        description="Listening to soothing music is something i can never compromise with, skimming through Spotify's pop songs charts is at times the best stress reliever that i can get my hands on."
-      />
+        description="Listening to soothing music is something I can never compromise with." />
       <ResumeHeading
-        heading="Competitive Gaming"
-        description="I like to challenge my reflexes a lot while competing in football games, pushing the rank and having interactive gaming sessions excites me the most."
-      />
+        heading="Teaching"
+        description="I feel blessed sharing my knowledge however little, with someone else."/>
     </div>,
   ];
 
