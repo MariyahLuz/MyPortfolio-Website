@@ -3,12 +3,13 @@
     flex-direction: column;
     justify-content: space-between;
     min-height: 570px;
-    background: url("../../assets/Home/bac7.jpeg") no-repeat center center fixed; 
+    background: url("../../assets/Home/purp5.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
-
+    background-size: cover;   
     
+
   }
+  
   

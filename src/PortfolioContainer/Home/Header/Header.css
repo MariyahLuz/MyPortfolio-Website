@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     height: 149px;
-    color: #007575
+    color: white
   }
   .header-parent {
     display: flex;
@@ -10,12 +10,13 @@
     justify-content: space-around;
     height: 100%;
     width: 70%;
-    color: #007575
+    color: white
+    /* white */
   }
   .header-logo {
     font-size: 50px;
     font-family: "Poppins ExtraBold";
-    color: #007575
+    color: white
   }
   .header-options {
     display: flex;
@@ -28,11 +29,11 @@
   }
   .header-hamburger {
     display: none;
-    color: #007575
+    color: white
   }
   .header-option-seperator {
     margin: 0 50px 0 0;
-    color: #007575
+    color: white
   }
   .selected-header-option {
     color: var(--dark-orange);
@@ -63,7 +64,7 @@
       height: 100vh;
       width: 100%;
       justify-content: space-around;
-      background-color: #1f2235;
+      background-color: black;
       z-index: 1000;
       opacity: 0.5;
     }

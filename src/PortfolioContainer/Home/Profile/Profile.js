@@ -9,16 +9,16 @@ export default function Profile() {
           <div className="colz">
             <div className="colz-icon">
               <a href="https://github.com/MariyahLuz">
-                <i className="fa fa-github"></i>
+                <i className="fa fa-github fa-lg "></i>
               </a>
               <a href="https://www.instagram.com/mariyah.luz/">
-                <i className="fa fa-instagram"></i>
+                <i className="fa fa-instagram fa-lg"></i>
               </a>
               <a href="https://www.linkedin.com/in/luzinda-maria-002414222/">
-                <i className="fa fa-linkedin"></i>
+                <i className="fa fa-linkedin fa-lg"></i>
               </a>
               <a href="https://twitter.com/LuzindaMariyah">
-                <i className="fa fa-twitter"></i>
+                <i className="fa fa-twitter fa-lg"></i>
               </a>
             </div>
           </div>

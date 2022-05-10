@@ -13,7 +13,8 @@
   }
   .screen-heading {
     font-size: 32px;
-    color: #007575;
+    color: #001128;
+    /* #1f2235 */
     font-family: "Poppins Bold";
   }
   .heading-seperator {
@@ -26,7 +27,7 @@
   .seperator-line {
     width: 100%;
     height: 2px;
-    background-color: #007575
+    background-color: #001128
   }
   .seperator-blob {
     height: 10px;

@@ -10,7 +10,7 @@
 .profile-parent{
     display: flex;
     align-items: center;
-    color: black;
+    color: white;
 }
 .profile-details-name{
     font-size: 24px;
@@ -26,7 +26,7 @@
     font-family: serif;
 }
 .primary-text{
-    color: (--white);
+    color: (--wheat);
 }
 .highlighted-text{
     color: var(--dark-orange);
@@ -48,7 +48,7 @@ color: #111;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 1px 0px 0px var(--black);
+    box-shadow: 0 1px 0px 0px var(--white);
     border-radius: 50%;
     height: 380px;
     width: 380px;
@@ -71,9 +71,10 @@ color: #111;
     transition: 1s ease-out;
 }
 .colz .colz-icon i{
-    color: black;
+    color: white;
     padding: 8px;
     padding-left: 0px;
+    size: large;
 }
 .colz .colz-icon i:hover{
     transform: scale(1.5);
