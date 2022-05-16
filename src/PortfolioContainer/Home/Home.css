@@ -3,13 +3,24 @@
     flex-direction: column;
     justify-content: space-between;
     min-height: 570px;
-    background: url("../../assets/Home/purp5.jpg") no-repeat center center fixed; 
+    /* background: url("../../assets/Home/purp5.jpg"), url("../../assets/Home/purp1.jpg"), url("../../assets/Home/purp3.jpeg") no-repeat center center fixed;  */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;   
-    
+    background-size: cover; 
+    animation: animate 16s ease infinite;  
+  }
 
+  @keyframes animate {
+    0%, 100%{
+      background-image: url("../../assets/Home/dark5.avif");
+    }
+    45%{
+      background-image: url("../../assets/Home/dark3.jpg");
+    }
+    75%{
+      background-image: url("../../assets/Home/dark5.avif");
+    }
   }
   
   

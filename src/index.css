@@ -98,7 +98,7 @@ body ::-webkit-scrollbar-thumb {
   color: var(--white);
   border: 2px solid linen;
   font-size: 12px;
-  background-color: #001128;
+  background-color: black;
 }
 /* @media only screen and (max-width: 414px) {
   .primary-btn {
@@ -109,7 +109,7 @@ body ::-webkit-scrollbar-thumb {
 .primary-btn:hover {
   color: aliceblue;
   border: 2px solid #ff5823;
-  background-color: #001128;
+  background-color: black;
 }
 
 .highlighted-btn {
