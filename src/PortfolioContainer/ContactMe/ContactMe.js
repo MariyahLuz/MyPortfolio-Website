@@ -1,3 +1,4 @@
+import emailjs from 'emailjs-com';
 import React, { useState } from "react";
 import Typical from "react-typical";
 import axios from "axios";
@@ -38,6 +39,18 @@ export default function ContactMe(props) {
   console.log(name);
   const submitForm = async (e) => {
     e.preventDefault();
+
+    emailjs.sendForm(
+      "service_tdgmrm6",
+      "template_m9391b5",
+      e.target,
+      '1lC0SrW-_zA-VWTne'
+      )
+      .then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+     }, function(error) {
+        console.log('FAILED...', error);
+     });
     try {
       let data = {
         name,
@@ -45,7 +58,7 @@ export default function ContactMe(props) {
         message,
       };
       setBool(true);
-      const res = await axios.post(`/contact`, data);
+      const res = (`/contact`, data);
       if (name.length === 0 || email.length === 0 || message.length === 0) {
         setBanner(res.data.msg);
         toast.error(res.data.msg);
@@ -93,13 +106,13 @@ export default function ContactMe(props) {
           <form onSubmit={submitForm}>
             <p>{banner}</p>
             <label htmlFor="name">Name</label>
-            <input type="text" onChange={handleName} value={name} />
+            <input type="text" onChange={handleName} name={name} className="form-control"/>
 
             <label htmlFor="email">Email</label>
-            <input type="email" onChange={handleEmail} value={email} />
+            <input type="email" onChange={handleEmail} name={email} className="form-control"/>
 
             <label htmlFor="message">Message</label>
-            <textarea type="text" onChange={handleMessage} value={message} />
+            <textarea type="text" onChange={handleMessage} name={message} className="form-control"/>
 
             <div className="send-btn">
               <button type="submit">
