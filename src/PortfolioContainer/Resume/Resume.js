@@ -44,9 +44,9 @@ const Resume = (props) => {
 
   /* STATIC RESUME DATA FOR THE LABELS*/
   const resumeBullets = [
-    { label: "Education", logoSrc: "educ.png" },
+    { label: "Education", logoSrc: "educ.jpg" },
     { label: "Work History", logoSrc: "work.jpg" },
-    { label: "Programming Skills", logoSrc: "prog.png" },
+    { label: "Programming Skills", logoSrc: "work1.jpg" },
     { label: "Projects", logoSrc: "proj.png" },
     { label: "Interests", logoSrc: "likes.png" },
   ];
@@ -240,7 +240,7 @@ const Resume = (props) => {
       >
         <img
           className="bullet-logo"
-          src={require(`../../assets/Resume/${bullet.logoSrc}`).default}
+          src={require(`../../assets/Resume/${bullet.logoSrc}`)}
           alt="B"
         />
         <span className="bullet-label">{bullet.label}</span>

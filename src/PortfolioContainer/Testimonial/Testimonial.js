@@ -11,7 +11,7 @@ import lady from "../../../src/img/test1.jpg";
 import mike from "../../../src/img/test5.jpg";
 import man from "../../../src/img/test6.jpg";
 import shape from "../../../src/img/test7.jpg";
-import me from "../../../src/img/mari.JPG";
+import me from "../../../src/img/maria.jpg";
 
 
 export default function Testimonial(props) {

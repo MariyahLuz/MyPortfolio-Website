@@ -12,6 +12,12 @@ import Animations from "../../utilities/Animations";
 import Footer from "../../PortfolioContainer/Footer/Footer";
 import "./ContactMe.css";
 
+const initialValues={
+  name:"",
+  email:"",
+  message:"",
+}
+
 export default function ContactMe(props) {
   let fadeInScreenHandler = (screen) => {
     if (screen.fadeInScreen !== props.id) return;
@@ -21,22 +27,30 @@ export default function ContactMe(props) {
   const fadeInSubscription =
     ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  // const [name, setName] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [message, setMessage] = useState("");
   const [banner, setBanner] = useState("");
   const [bool, setBool] = useState(false);
 
-  const handleName = (e) => {
-    setName(e.target.value);
-  };
-  const handleEmail = (e) => {
-    setEmail(e.target.value);
-  };
-  const handleMessage = (e) => {
-    setMessage(e.target.value);
-  };
-  console.log(name);
+  const[values,setValues]=React.useState(initialValues);
+  const handleInputChanage=(e)=>{
+    const {name,value} = e.target;
+    setValues({
+      ...values,
+    [name]:value
+    })
+  }
+  // const handleName = (e) => {
+  //   setName(e.target.value);
+  // };
+  // const handleEmail = (e) => {
+  //   setEmail(e.target.value);
+  // };
+  // const handleMessage = (e) => {
+  //   setMessage(e.target.value);
+  // };
+  // console.log(values);
   const submitForm = async (e) => {
     e.preventDefault();
 
@@ -53,13 +67,13 @@ export default function ContactMe(props) {
      });
     try {
       let data = {
-        name,
-        email,
-        message,
+        name:values.name,
+        email:values.email,
+        message:values.message
       };
       setBool(true);
       const res = (`/contact`, data);
-      if (name.length === 0 || email.length === 0 || message.length === 0) {
+      if (values.name.length === 0 || values.email.length === 0 || values.message.length === 0) {
         setBanner(res.data.msg);
         toast.error(res.data.msg);
         setBool(false);
@@ -68,9 +82,7 @@ export default function ContactMe(props) {
         toast.success(res.data.msg);
         setBool(false);
 
-        setName("");
-        setEmail("");
-        setMessage("");
+        setValues(initialValues);
       }
     } catch (error) {
       console.log(error);
@@ -106,13 +118,13 @@ export default function ContactMe(props) {
           <form onSubmit={submitForm}>
             <p>{banner}</p>
             <label htmlFor="name">Name</label>
-            <input type="text" onChange={handleName} name={name} className="form-control"/>
+            <input type="text" onChange={handleInputChanage} value={values.name} name="name" className="form-control"/>
 
             <label htmlFor="email">Email</label>
-            <input type="email" onChange={handleEmail} name={email} className="form-control"/>
+            <input type="email" onChange={handleInputChanage} value={values.email} name="email" className="form-control"/>
 
             <label htmlFor="message">Message</label>
-            <textarea type="text" onChange={handleMessage} name={message} className="form-control"/>
+            <textarea type="text" onChange={handleInputChanage} value={values.message} name="message" className="form-control"/>
 
             <div className="send-btn">
               <button type="submit">
